@@ -1,4 +1,4 @@
-#include "Arvore.h"
+#include "../Heather/Arvore.h"
 
 void Inicializa(Apontador *No){
   *No = NULL;

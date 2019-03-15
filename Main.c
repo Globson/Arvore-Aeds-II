@@ -1,4 +1,4 @@
-#include "Arvore.h"
+#include "Heather/Arvore.h"
 
 int main(int argc, char const *argv[]) {
   Apontador Raiz;
@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]) {
   printf("+=+=++=+=++=+=++=+=++=+BEM-VINDO=++=+=++=+=++=+=++=+=++=+=+=\n");
   printf("+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
   while(1){
-    int a=0;  
+    int a=0;
     printf("1");
     printf("Entre com a opção desejada:");
     if(a==1){
