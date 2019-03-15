@@ -19,3 +19,10 @@ Apontador Insere(Apontador *No,int V){
     (*No)->Dir = Insere(&((*No)->Dir),V);
   return *No;
 }
+
+int Pesquisa(Apontador No,int V){
+  if(No == NULL) return 0;
+  else if(No->Chave == V) return 1;
+  else if(No->Chave < V) return (Pesquisa(No->Dir, V));
+  else return (Pesquisa(No->Esq, V));
+}

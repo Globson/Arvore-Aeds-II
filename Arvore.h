@@ -10,9 +10,11 @@ typedef struct Arvore{
   Apontador Esq;
 }T_Arvore;
 
-void Inicializa (Apontador *No);
+void Inicializa(Apontador *No);
 
 Apontador Insere(Apontador *No,int V);
+
+int Pesquisa(Apontador No,int V);
 
 
 #endif
