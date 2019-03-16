@@ -171,20 +171,11 @@ int MaiorNo(Pont No){
     return 0;
   }else{
     Pont Aux = No;
-    int k=0,M;
-    while(Aux->Dir != NULL){
-      k++;
-      Aux = Aux->Dir;
-    }
-    Aux = No;
-    M=Aux->Chave;
-    Aux= Aux->Dir;
-    for(int i=0;i<k;i++){
-      if(M < Aux->Chave){
-        M = Aux->Chave;
+    int M;
+      while(Aux->Dir != NULL){
         Aux = Aux->Dir;
-        }
       }
+    M=Aux->Chave;
       return M;
     }
   }
