@@ -2,19 +2,29 @@
 #include <stdio.h>
 #ifndef ARVORE_H
 #define ARVORE_H
-typedef struct Arvore* Apontador;
-
+typedef struct Arvore* Pont;
 typedef struct Arvore{
   int Chave;
-  Apontador Dir;
-  Apontador Esq;
+  struct Arvore *Dir;
+  struct Arvore  *Esq;
 }T_Arvore;
 
-void Inicializa(Apontador *No);
+void Inicializa(Pont *No);
 
-Apontador Insere(Apontador *No,int V);
+void Insere(Pont *No,int V);
 
-int Pesquisa(Apontador No,int V);
+Pont MaiorDireita(Pont *No);
 
+Pont MenorEsquerda(Pont *No);
+
+int Pesquisa(Pont No,int V);
+
+void Remover(Pont *No,int V);
+
+void Ordem(Pont No);
+
+void PreOrdem(Pont No);
+
+void PosOrdem(Pont No);
 
 #endif
