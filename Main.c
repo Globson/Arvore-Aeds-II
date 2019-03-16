@@ -3,11 +3,11 @@
 int main(int argc, char const *argv[]) {
   Pont Raiz;
   printf("+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n\n");
-  printf("------------------BEM-VINDO A ARVORE DO GROBS---------------\n\n");
-  printf("+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
+  printf("------------------BEM-VINDO A ARVORE DO GROBS---------------\n");
   while(1){
     int a=0;
-    printf("\n1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover");
+    printf("\n+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
+    printf("1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover\n8->ContarNos\n9->ContarFolhas\n10->Altura\n11->SomaPares");
     printf("\n\nEntre com a opção desejada:");
     scanf("%d",&a);
     if(a==1){
@@ -44,6 +44,31 @@ int main(int argc, char const *argv[]) {
       printf("Entre com o numero a ser removido:");
       scanf("%d",&c);
       Remover(&Raiz,c);
+    }
+    if(a==8){
+      int c;
+      c=ContarNos(Raiz);
+      printf("Quantidade de Nos: %d",c);
+    }
+    if(a==9){
+      int c;
+      c=ContarFolhas(Raiz);
+      printf("Quantidade de Folhas: %d",c);
+    }
+    if(a==10){
+      int c;
+      c=Altura(Raiz);
+      printf("Altura da Arvore: %d",c);
+    }
+    if(a==11){
+      int c;
+      c=SomaPares(Raiz);
+      printf("A soma dos nos pares é: %d",c);
+    }
+    if(a==12){
+      int c;
+      c=MaiorNo(Raiz);
+      printf("O maior no: %d",c);
     }
   }
   return 0;

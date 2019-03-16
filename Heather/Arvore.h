@@ -27,4 +27,16 @@ void PreOrdem(Pont No);
 
 void PosOrdem(Pont No);
 
+int ContarNos(Pont No);
+
+int ContarFolhas(Pont No);
+
+int Maior(int a,int b);
+
+int Altura(Pont No);
+
+int SomaPares(Pont No);
+
+int MaiorNo(Pont No);
+
 #endif

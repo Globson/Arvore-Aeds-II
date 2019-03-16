@@ -119,3 +119,72 @@ void PosOrdem(Pont No){
     printf("\n%d",No->Chave);
   }
 }
+
+int ContarNos(Pont No){
+  if(No == NULL){
+    return 0;
+  }else{
+    return 1 + ContarNos(No->Esq) + ContarNos(No->Dir);
+  }
+}
+
+int ContarFolhas(Pont No){
+  if(No == NULL){
+    return 0;
+  }
+  if(No->Esq == NULL && No->Dir == NULL){
+    return 1;
+  }
+  return ContarFolhas(No->Esq) + ContarFolhas(No->Dir);
+}
+
+int Maior(int a,int b){
+  if(a >b){
+    return a;
+  }else{
+    return b;
+  }
+}
+
+int Altura(Pont No){
+  if((No == NULL) || (No->Esq == NULL) || (No->Dir = NULL)){
+    return 0;
+  }else{
+    return 1 + Maior(Altura(No->Esq),Altura(No->Dir));
+  }
+}
+
+int SomaPares(Pont No){
+  if(No == NULL){
+    return 0;
+}else{
+    if(No->Chave % 2 == 0){
+      return No->Chave + SomaPares(No->Esq) + SomaPares(No->Dir);
+    }else{
+      return SomaPares(No->Esq) + SomaPares(No->Dir);
+    }
+  }
+}
+
+int MaiorNo(Pont No){
+  if(No == NULL){
+    return 0;
+  }else{
+    Pont Aux = No;
+    int k=0,M;
+    while(Aux->Dir != NULL){
+      k++;
+      Aux = Aux->Dir;
+    }
+    Aux = No;
+    M=Aux->Chave;
+    Aux= Aux->Dir;
+    for(int i=0;i<k;i++){
+      if(M < Aux->Chave){
+        M = Aux->Chave;
+        Aux = Aux->Dir;
+        }
+      }
+      return M;
+    }
+  }
