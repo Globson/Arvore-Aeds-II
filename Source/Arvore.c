@@ -179,3 +179,19 @@ int MaiorNo(Pont No){
       return M;
     }
   }
+
+  void Primos(Pont No){
+    if(No != NULL){
+      int k=0;
+      for(int i=1;i<=No->Chave;i++){
+        if(No->Chave % i == 0){
+          k++;
+        }
+      }
+    if(k == 2){
+      printf("\n%d",No->Chave);
+    }
+    Primos(No->Esq);
+    Primos(No->Dir);
+    }
+  }

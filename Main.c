@@ -7,7 +7,7 @@ int main(int argc, char const *argv[]) {
   while(1){
     int a=0;
     printf("\n+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
-    printf("1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover\n8->ContarNos\n9->ContarFolhas\n10->Altura\n11->SomaPares\n12->MaiorNo");
+    printf("1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover\n8->ContarNos\n9->ContarFolhas\n10->Altura\n11->SomaPares\n12->MaiorNo\n13->Primos\n14->Largura\n15->Finalizar");
     printf("\n\nEntre com a opção desejada:");
     scanf("%d",&a);
     if(a==1){
@@ -69,6 +69,13 @@ int main(int argc, char const *argv[]) {
       int c;
       c=MaiorNo(Raiz);
       printf("O maior No: %d",c);
+    }
+    if(a==13){
+      Primos(Raiz);
+    }
+    if(a==14){}//TODO
+    if(a==15){
+      break;
     }
   }
   return 0;

@@ -39,4 +39,6 @@ int SomaPares(Pont No);
 
 int MaiorNo(Pont No);
 
+void Primos(Pont No);
+
 #endif
