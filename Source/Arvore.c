@@ -1,4 +1,4 @@
-#include "../Heather/Arvore.h"
+#include "../Header/Arvore.h"
 
 void Inicializa(Pont *No){
   *No = NULL;
