@@ -7,9 +7,13 @@ int main(int argc, char const *argv[]) {
   while(1){
     int a=0;
     printf("\n+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
-    printf("1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover\n8->ContarNos\n9->ContarFolhas\n10->Altura\n11->SomaPares\n12->MaiorNo\n13->Primos\n14->Largura\n15->Finalizar");
-    printf("\n\nEntre com a opção desejada:");
-    scanf("%d",&a);
+    printf("1->Inicializa\n2->Insere\n3->Ordem\n4->PreOrdem\n5->PosOrdem\n6->Pesquisa\n7->Remover\n8->ContarNos\n9->ContarFolhas\n10->Altura\n11->SomaPares\n12->MaiorNo\n13->Primos\n14->Largura\n15->Finalizar\n");
+    while(a != 1 && a != 2 && a != 3 && a != 4 && a != 5 && a != 6 && a != 7 && a != 8 && a != 9 && a != 10 && a != 11 && a != 12 && a != 13 && a != 14 && a != 15){
+      printf("Digite a opcao desejada:");
+      scanf("%d",&a);
+      if(a != 1 && a != 2 && a != 3 && a != 4 && a != 5 && a != 6 && a != 7 && a != 8 && a != 9 && a != 10 && a != 11 && a != 12 && a != 13 && a != 14 && a != 15){
+        printf("Opcao invalida!\n");}}
+
     if(a==1){
       Inicializa(&Raiz);
     }
@@ -75,6 +79,8 @@ int main(int argc, char const *argv[]) {
     }
     if(a==14){}//TODO
     if(a==15){
+      printf("\n\t\t  ---------ARVORE DO GROBS---------\n\n\t\t   Desenvolvedor:\n\t\t    Samuel Sena - 3494\n\n\t\t  OBRIGADO POR UTILIZAR O PROGRAMA!");
+      printf("\n+=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=++=+=+\n");
       break;
     }
   }
